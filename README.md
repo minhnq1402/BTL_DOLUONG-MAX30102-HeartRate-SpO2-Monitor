@@ -45,13 +45,7 @@ Dự án này sử dụng framework PlatformIO để xây dựng một thiết b
 
 ### Kết nối phần cứng (Hardware Wiring)
 * Kết nối các chân theo sơ đồ sau:
-```
-ESP32 DevKit V1	MAX30102 & OLED SSD1306
-3V3	VCC
-GND	GND
-GPIO 21	SDA
-GPIO 22	SCL
-```
+![So Do](./Schematic.png)
 * Xuất sang Trang tính
 * Cài đặt (Installation)
 ### Clone repository:

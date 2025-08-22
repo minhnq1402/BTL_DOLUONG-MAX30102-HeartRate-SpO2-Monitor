@@ -12,7 +12,7 @@ Dự án này sử dụng framework PlatformIO để xây dựng một thiết b
 ![Top_View](./mau.png)
 
 ## Product Clip:
-[![Demo máy do nhịp tim ESP32](./product-demo.gif)](https://www.youtube.com/shorts/1v-zVHLUQS0)
+![Demo máy do nhịp tim ESP32](https://www.youtube.com/shorts/1v-zVHLUQS0)
 
 ## ✨ Features
 -   Giao diện khởi động: Hiển thị các thông báo chào mừng và trạng thái khi hệ thống bắt đầu.

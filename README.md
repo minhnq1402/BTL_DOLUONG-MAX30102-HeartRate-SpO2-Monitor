@@ -87,9 +87,6 @@ monitor_speed = 115200
 ## 🤝 Contributing
 Mọi đóng góp đều được chào đón! Vui lòng mở một issue để thảo luận về những thay đổi bạn muốn thực hiện trước khi tạo pull request.
 
-📄 License
-TODO: Thêm thông tin bản quyền.
-
 <div align="center">
 
 Made with ❤️ by minhnq1402

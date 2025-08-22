@@ -8,6 +8,12 @@ Một dự án PlatformIO dùng để theo dõi nhịp tim và SpO2 sử dụng 
 📖 Overview
 Dự án này sử dụng framework PlatformIO để xây dựng một thiết bị theo dõi nhịp tim và nồng độ oxy trong máu (SpO2). Chương trình được viết bằng ngôn ngữ C++ cho vi điều khiển ESP32 DevKit V1. Hệ thống có chức năng đọc dữ liệu thô từ cảm biến MAX30102, xử lý để tính toán các chỉ số sức khỏe, và hiển thị kết quả lên màn hình OLED SSD1306, bao gồm cả biểu đồ sóng hồng ngoại (IR) theo thời gian thực.
 
+## Product Image:
+![Top_View](./mau.png)
+
+## Product Clip:
+![Demo máy đo nhịp tim ESP32](demo_BTL.mp4)
+
 ## ✨ Features
 -   Giao diện khởi động: Hiển thị các thông báo chào mừng và trạng thái khi hệ thống bắt đầu.
 -   Phát hiện ngón tay: Tự động kiểm tra và thông báo cho người dùng đặt ngón tay lên cảm biến để bắt đầu đo.

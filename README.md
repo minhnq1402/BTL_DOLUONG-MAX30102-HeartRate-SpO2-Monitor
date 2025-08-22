@@ -1,85 +1,136 @@
-# ⚡ BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor
+Chắc chắn rồi! Dưới đây là file README được soạn thảo lại dựa trên mẫu của bạn, giữ nguyên các tiêu đề tiếng Anh và định dạng Markdown, đồng thời cập nhật nội dung bằng tiếng Việt và bổ sung các chi tiết kỹ thuật chính xác từ dự án của chúng ta.
 
+⚡ BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor
 <div align="center">
 
-**A PlatformIO project for monitoring heart rate and SpO2 using the MAX30102 sensor.**
+Một dự án PlatformIO dùng để theo dõi nhịp tim và SpO2 sử dụng cảm biến MAX30102, vi điều khiển ESP32 và màn hình OLED SSD1306.
 
 </div>
 
-## 📖 Overview
-
-This project uses the PlatformIO framework to implement a heart rate and SpO2 monitor utilizing the MAX30102 sensor.  The code is written in C++ and is designed for embedded systems development.  It reads sensor data, processes it to extract heart rate and SpO2 levels, and potentially outputs this data to a display or other interface (implementation details not provided in the repository).
-
-## ✨ Features
-
-- Reads heart rate and SpO2 data from the MAX30102 sensor.
-- (Presumed) Processes raw sensor data to calculate heart rate and SpO2.
-- (Presumed) Outputs calculated values to a display or communication interface.
+📖 Overview
+Dự án này sử dụng framework PlatformIO để xây dựng một thiết bị theo dõi nhịp tim và nồng độ oxy trong máu (SpO2). Chương trình được viết bằng ngôn ngữ C++ cho vi điều khiển ESP32 DevKit V1. Hệ thống có chức năng đọc dữ liệu thô từ cảm biến MAX30102, xử lý để tính toán các chỉ số sức khỏe, và hiển thị kết quả lên màn hình OLED SSD1306, bao gồm cả biểu đồ sóng hồng ngoại (IR) theo thời gian thực.
 
 
-## 🛠️ Tech Stack
 
-- **Language:** C++
-- **Framework:** PlatformIO
-- **Microcontroller:**  (Requires further analysis of `platformio.ini` to determine the specific microcontroller)
-- **Sensor:** MAX30102
 
-## 🚀 Quick Start
 
-### Prerequisites
+✨ Features
 
-- PlatformIO IDE installed.  (https://platformio.org/getstarted)
-- A microcontroller supported by PlatformIO (see `platformio.ini` for details).
-- A MAX30102 sensor properly wired to the microcontroller.
+Giao diện khởi động: Hiển thị các thông báo chào mừng và trạng thái khi hệ thống bắt đầu.
 
-### Installation
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/minhnq1402/BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor.git
-   cd BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor
-   ```
 
-2. **Open in PlatformIO:** Open the project folder in the PlatformIO IDE.
+Phát hiện ngón tay: Tự động kiểm tra và thông báo cho người dùng đặt ngón tay lên cảm biến để bắt đầu đo.
 
-3. **Build and Upload:** PlatformIO will automatically detect the project configuration. Use the PlatformIO IDE to build and upload the code to your microcontroller.  Specific build and upload commands depend on your PlatformIO setup.
 
-## 📁 Project Structure
 
+
+Đo lường thời gian thực: Thu thập, tính toán và hiển thị liên tục chỉ số nhịp tim (BPM) và SpO2 (%).
+
+
+
+Hiển thị trực quan: Sử dụng màn hình OLED để hiển thị các chỉ số đo được, trạng thái hoạt động, và biểu tượng trái tim.
+
+
+
+
+
+Biểu đồ sóng IR: Vẽ biểu đồ dạng sóng của tín hiệu hồng ngoại (IR) theo thời gian thực, giúp người dùng thấy được tín hiệu tim mạch.
+
+
+🛠️ Tech Stack
+Ngôn ngữ (Language): C++
+
+Framework: PlatformIO, Arduino
+
+
+Vi điều khiển (Microcontroller): ESP32 DevKit V1 
+
+
+Cảm biến (Sensor): MAX30102 
+
+
+Màn hình (Display): OLED SSD1306 (128x64, I2C) 
+
+Thư viện (Libraries):
+
+SparkFun MAX3010x Pulse and Proximity Sensor Library
+
+Adafruit GFX Library
+
+Adafruit SSD1306
+
+🚀 Quick Start
+Yêu cầu (Prerequisites)
+Phần mềm: Đã cài đặt Visual Studio Code và extension PlatformIO IDE.
+
+Phần cứng:
+
+1x Board ESP32 DevKit V1 
+
+1x Cảm biến MAX30102 
+
+1x Màn hình OLED SSD1306 128x64 
+
+Dây cắm và breadboard.
+
+Kết nối phần cứng (Hardware Wiring)
+Kết nối các chân theo sơ đồ sau:
+
+
+ESP32 DevKit V1	MAX30102 & OLED SSD1306
+3V3	VCC
+GND	GND
+GPIO 21	SDA
+GPIO 22	SCL
+
+Xuất sang Trang tính
+Cài đặt (Installation)
+Clone repository:
+
+Bash
+```
+git clone https://github.com/minhnq1402/BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor.git
+cd BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor
+```
+Mở bằng PlatformIO: Mở thư mục dự án vừa clone về bằng Visual Studio Code (với extension PlatformIO).
+
+Biên dịch và Nạp code: PlatformIO sẽ tự động đọc file platformio.ini và cài đặt các thư viện cần thiết. Sau khi cài đặt xong, bạn có thể sử dụng các nút chức năng của PlatformIO (dấu tick ✓ để Build, mũi tên → để Upload) để biên dịch và nạp chương trình vào ESP32.
+
+📁 Project Structure
 ```
 BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor/
 ├── .gitignore
-├── .vscode/             # VS Code project settings (if any)
-├── include/             # Header files (likely sensor library includes)
-├── lib/                 # Libraries (possibly custom or third-party)
-├── platformio.ini      # PlatformIO project configuration
-├── src/                 # Source code for the heart rate monitor
-└── test/                # Test files (if any)
+├── .vscode/          # Cài đặt riêng của VS Code
+├── include/          # Chứa các file header (.h)
+├── lib/              # Chứa các thư viện của dự án (PlatformIO tự quản lý)
+├── platformio.ini    # File cấu hình chính của dự án PlatformIO
+├── src/              # Chứa mã nguồn chính (main.cpp)
+└── test/             # Chứa các file kiểm thử (test)
 ```
+⚙️ Configuration
+Cấu hình chính của dự án nằm trong file platformio.ini. File này định nghĩa bo mạch được sử dụng, framework, tốc độ cổng Serial và quan trọng nhất là các thư viện phụ thuộc (lib_deps).
 
-## ⚙️ Configuration
+Ini, TOML
+```
+[env:esp32dev]
+platform = espressif32
+board = esp32dev
+framework = arduino
+lib_deps =
+    adafruit/Adafruit GFX Library
+    adafruit/Adafruit SSD1306
+    sparkfun/SparkFun MAX3010x Pulse and Proximity Sensor Library
+monitor_speed = 115200
+```
+🤝 Contributing
+Mọi đóng góp đều được chào đón! Vui lòng mở một issue để thảo luận về những thay đổi bạn muốn thực hiện trước khi tạo pull request.
 
-The primary configuration is within the `platformio.ini` file.  This file specifies the board, framework, libraries, and other build settings.  Refer to the `platformio.ini` file for detailed configuration options.  TODO: Analyze `platformio.ini` for more precise configuration details.
-
-## 🧪 Testing
-
-TODO:  Add testing information once test files in the `/test` directory are analyzed.
-
-
-## 🤝 Contributing
-
-Contributions are welcome!  Please open an issue to discuss potential changes before creating a pull request.
-
-## 📄 License
-
-TODO: Add License information.
-
-
----
+📄 License
+TODO: Thêm thông tin bản quyền.
 
 <div align="center">
 
-**Made with ❤️ by minhnq1402**
+Made with ❤️ by minhnq1402
 
 </div>
-

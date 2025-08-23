@@ -1,39 +1,39 @@
-# ⚡ BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor
+# BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor
 <div align="center">
 
 Một dự án PlatformIO dùng để theo dõi nhịp tim và SpO2 sử dụng cảm biến MAX30102, vi điều khiển ESP32 và màn hình OLED SSD1306.
 
 </div>
 
-📖 Overview
+## 1.Overview
 Dự án này sử dụng framework PlatformIO để xây dựng một thiết bị theo dõi nhịp tim và nồng độ oxy trong máu (SpO2). Chương trình được viết bằng ngôn ngữ C++ cho vi điều khiển ESP32 DevKit V1. Hệ thống có chức năng đọc dữ liệu thô từ cảm biến MAX30102, xử lý để tính toán các chỉ số sức khỏe, và hiển thị kết quả lên màn hình OLED SSD1306, bao gồm cả biểu đồ sóng hồng ngoại (IR) theo thời gian thực.
 
-## Product Image:
+## 2.Product Image:
 ![Top_View](./mau.png)
 
-## Product Clip:
+## 2.1Product Clip:
 ![Demo máy do nhịp tim ESP32](https://www.youtube.com/shorts/1v-zVHLUQS0)
 
-## ✨ Features
+## 3.Features
 -   Giao diện khởi động: Hiển thị các thông báo chào mừng và trạng thái khi hệ thống bắt đầu.
 -   Phát hiện ngón tay: Tự động kiểm tra và thông báo cho người dùng đặt ngón tay lên cảm biến để bắt đầu đo.
 -   Đo lường thời gian thực: Thu thập, tính toán và hiển thị liên tục chỉ số nhịp tim (BPM) và SpO2 (%).
 -   Hiển thị trực quan: Sử dụng màn hình OLED để hiển thị các chỉ số đo được, trạng thái hoạt động, và biểu tượng trái tim.
 -   Biểu đồ sóng IR: Vẽ biểu đồ dạng sóng của tín hiệu hồng ngoại (IR) theo thời gian thực, giúp người dùng thấy được tín hiệu tim mạch.
 
-## 🛠️ Tech Stack
+## 4.Tech Stack
     -   Ngôn ngữ (Language): C++
     -   Framework: PlatformIO, Arduino
     -   Vi điều khiển (Microcontroller): ESP32 DevKit V1    
     -   Cảm biến (Sensor): MAX30102
     -   Màn hình (Display): OLED SSD1306 (128x64, I2C)
 
-### Thư viện (Libraries):
+### Libraries:
     -   SparkFun MAX3010x Pulse and Proximity Sensor Library
     -   Adafruit GFX Library
     -   Adafruit SSD1306
 
-## 🚀 Quick Start
+## 5.Quick Start
 ### Yêu cầu (Prerequisites)
 * Phần mềm: Đã cài đặt Visual Studio Code và extension PlatformIO IDE.
 
@@ -58,7 +58,7 @@ Mở bằng PlatformIO: Mở thư mục dự án vừa clone về bằng Visual 
 
 Biên dịch và Nạp code: PlatformIO sẽ tự động đọc file platformio.ini và cài đặt các thư viện cần thiết. Sau khi cài đặt xong, bạn có thể sử dụng các nút chức năng của PlatformIO (dấu tick ✓ để Build, mũi tên → để Upload) để biên dịch và nạp chương trình vào ESP32.
 ```
-## 📁 Project Structure
+## 6.Project Structure
 ```
 BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor/
 ├── .gitignore
@@ -69,7 +69,7 @@ BTL_DOLUONG-MAX30102-HeartRate-SpO2-Monitor/
 ├── src/              # Chứa mã nguồn chính (main.cpp)
 └── test/             # Chứa các file kiểm thử (test)
 ```
-## ⚙️ Configuration
+## 7.Configuration
 Cấu hình chính của dự án nằm trong file platformio.ini. File này định nghĩa bo mạch được sử dụng, framework, tốc độ cổng Serial và quan trọng nhất là các thư viện phụ thuộc (lib_deps).
 
 Ini, TOML
@@ -84,7 +84,7 @@ lib_deps =
     sparkfun/SparkFun MAX3010x Pulse and Proximity Sensor Library
 monitor_speed = 115200
 ```
-## 🤝 Contributing
+## 8
 Mọi đóng góp đều được chào đón! Vui lòng mở một issue để thảo luận về những thay đổi bạn muốn thực hiện trước khi tạo pull request.
 
 <div align="center">

@@ -10,6 +10,7 @@ Dự án này sử dụng framework PlatformIO để xây dựng một thiết b
 
 ## 2.Product Image:
 ![Top_View](./mau.png)
+![Front_View](./product.jpg)
 
 ## 2.1Product Clip:
 ![Demo máy do nhịp tim ESP32](https://www.youtube.com/shorts/1v-zVHLUQS0)
